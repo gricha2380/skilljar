@@ -15,10 +15,13 @@
         </linearGradient>
         <path d="M82.4148595,179.318138 C55.9237821,179.788598 29.8450663,194.872186 29.8450663,194.872186 L-18.7823889,147.194164 L-29.6547419,250.639666 L38.4227438,300.024629 L125.76472,300.712027 L212.420037,221.797453 L186.157342,134.878017 L134.129898,193.020174 C134.129898,193.020174 108.905937,178.847679 82.4148595,179.318138 Z" id="path-10"></path>
         <ellipse id="path-11" cx="89.2566225" cy="228.945498" rx="16.2284768" ry="12.8317536"></ellipse>
-        <polygon id="path-12" points="5.68434189e-14 83.9339949 7.24675325 229.197153 84.5454545 229.197153 93 83.9339949"></polygon>
-        <polygon id="path-13" points="11.474026 150.512942 14.7188409 220.723469 78.5335336 220.723469 83.9415584 127.512942"></polygon>
+        <rect id="path-12" x="0" y="0" width="188" height="187" rx="45"></rect>
+        <rect id="path-14" x="-33" y="104" width="173" height="144"></rect>
+        <rect id="path-15" x="-33" y="-72" width="257" height="144"></rect>
+        <polygon id="path-16" points="5.68434189e-14 83.9339949 7.24675325 229.197153 84.5454545 229.197153 93 83.9339949"></polygon>
+        <polygon id="path-17" points="11.474026 150.512942 14.7188409 220.723469 78.5335336 220.723469 83.9415584 127.512942"></polygon>
     </defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Page-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Gregor">
             <mask id="mask-2" fill="white">
                 <use xlink:href="#path-1"></use>
@@ -68,14 +71,30 @@
                             <ellipse id="Oval-1-Copy" fill="#311B0C" cx="99.4799189" cy="32.0418641" rx="7.64734771" ry="10.6806214"></ellipse>
                         </g>
                     </g>
+                    <g id="logo" stroke-width="1" fill="none" transform="translate(167.000000, 426.000000)">
+                        <g id="Rectangle-2" transform="translate(4.000000, 0.000000)">
+                            <mask id="mask-13" fill="white">
+                                <use xlink:href="#path-12"></use>
+                            </mask>
+                            <use id="Mask" fill="#1692CE" xlink:href="#path-12"></use>
+                            <g mask="url(#mask-13)">
+                                <use fill="#094B7D" fill-rule="evenodd" xlink:href="#path-14"></use>
+                                <rect stroke="#515151" stroke-width="20" x="-23" y="114" width="153" height="124"></rect>
+                            </g>
+                            <g id="Rectangle-2-Copy" mask="url(#mask-13)">
+                                <use fill="#A3DCEF" fill-rule="evenodd" xlink:href="#path-15"></use>
+                                <rect stroke="#515151" stroke-width="20" x="-23" y="-62" width="237" height="124"></rect>
+                            </g>
+                        </g>
+                    </g>
                     <g id="drink" stroke-width="1" fill="none" transform="translate(195.500000, 337.000000) rotate(11.000000) translate(-195.500000, -337.000000) translate(149.000000, 222.000000)" stroke-linecap="round" stroke-linejoin="round">
                         <g id="cup">
-                            <use fill="#D2D2D2" fill-rule="evenodd" xlink:href="#path-12"></use>
+                            <use fill="#D2D2D2" fill-rule="evenodd" xlink:href="#path-16"></use>
                             <path stroke="#D2D2D2" stroke-width="5" d="M-2.62782664,81.4339949 L95.6497347,81.4339949 L86.9041813,231.697153 L4.86836195,231.697153 L-2.62782664,81.4339949 Z"></path>
                         </g>
                         <polyline id="straw" stroke="#BF0A0A" stroke-width="8" points="76.3129256 0.444815559 47.1038961 64.1578947 37.4415584 200.947368"></polyline>
                         <g id="water">
-                            <use fill="#72C1F6" fill-rule="evenodd" xlink:href="#path-13"></use>
+                            <use fill="#72C1F6" fill-rule="evenodd" xlink:href="#path-17"></use>
                             <path stroke="#72C1F6" stroke-width="5" d="M8.88807006,148.710787 L86.6477751,124.031139 L80.8926893,223.223469 L12.3317112,223.223469 L8.88807006,148.710787 Z"></path>
                         </g>
                     </g>
