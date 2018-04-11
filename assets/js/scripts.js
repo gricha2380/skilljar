@@ -1,6 +1,6 @@
 'use strict'; // no sloppy JS habits allowed here.
 document.addEventListener('DOMContentLoaded', function(){
-	document.getElementById("calculate").addEventListener("click", function(event){
+	document.querySelector("body").addEventListener("click", function(event){
 		event.preventDefault();
 		console.log("hello !");
 	});

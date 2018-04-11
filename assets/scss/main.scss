@@ -1,7 +1,117 @@
+$primary: #00284d;
+$secondary: #01ACB1;
+$white: #F9F9F9;
+
+h1,h2,h3 {margin: 0;font-family: 'Oswald';}
+
+h1 {
+    font-size: 7rem;
+}
+
+h2 {
+	text-transform: uppercase;
+}
+
+p {
+		padding: 10px 0px; 
+}
+
 body {
-	background: green;
-	color: red;
-	p {
-		padding: 10px 0px;
+	background: $primary;
+	color: $secondary;
+	font-family: 'Roboto', tahoma, arial, helvetica, sans-serif;	
+	margin: 0;
+	font-size: 1.2rem;
+}
+
+.container {
+	padding: 1rem;
+	max-width: 1000px;
+	margin: auto;
+}
+
+.row {
+	display: flex;
+	.flex {
+		flex: 1;
 	}
+}
+
+.empasis {
+	border-bottom: 5px solid $secondary;
+    margin-top: -1.2rem;
+}
+#header {
+	text-align: center;
+	padding-bottom: 12rem;
+	h1 {
+		color: $white;
+	}
+	h4 {
+		color: $secondary;
+		margin: 0;
+		font-size: 1.4rem;
+    	font-weight: lighter;
+	}
+}
+
+#midBody {
+	background-color: $white;
+    padding-top: 1rem;
+	color: $primary;
+	&:before {
+		content: "";
+		background-image: url('../img/midTop.svg');
+		// position: relative;
+		width: 100%;
+		height: 10rem;
+		display: block;
+		background-position: center;
+		background-size: cover;
+		margin: -10rem 0 -5rem;
+		background-repeat: no-repeat;
+	}
+}
+
+#gregorImg {
+	height: 250px;
+    width: 250px;
+    position: absolute;
+    right: 5rem;
+	margin-top: -5rem;
+	background: url('../img/me.svg') no-repeat;
+	background-size: contain;
+}
+
+#careerTitle {
+	text-align: center;
+	margin-bottom: 1rem;
+	h2 {
+		color: $secondary;
+		display: inline-block;
+		background: $white;
+		padding: 0 1rem;
+		// font-size: ;
+	}
+}
+
+#highlightsImg {
+	max-height: 250px;
+    margin-top: -3rem;
+}
+
+#customerSuccess {
+	display: inline-block;
+    vertical-align: top;
+    padding: 1rem 3rem;
+}
+
+#more {
+	text-align: center;
+    color: rgba(0, 0, 0, .5);
+}
+
+#lowerBody {
+	text-align: center;
+	color: $white;
 }
