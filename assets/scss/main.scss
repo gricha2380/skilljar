@@ -259,6 +259,44 @@ body {
 	}
 }
 
+/* Tooltips
+-------------------------------------------------------------- */
+.toolTip {
+	position: relative;
+	display: inline-block;
+	.toolTipContent {
+		background: #000;
+		border-radius: .5rem;
+		color: #fff;
+		display: none;
+		position: absolute;
+		text-align: center;
+		&:after {
+			border-left: 20px solid transparent;
+			border-right: 20px solid transparent;
+			border-top: 20px solid #000;
+			content: "";
+			height: 0;
+			left: calc(50% - 20px);
+			margin-top: 34px;
+			position: absolute;
+			width: 0;
+		}
+		a {
+			color: white;
+		}
+	}
+	&:hover {
+		.toolTipContent {
+			display: block;
+			margin: -5rem 0 0 8rem;
+			padding: 1rem .5rem;
+			width: 17rem;
+			z-index: 2;
+		}
+	}
+}
+
 /* Animations
 -------------------------------------------------------------- */
 @keyframes bounce {

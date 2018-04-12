@@ -35,7 +35,6 @@ document.addEventListener('DOMContentLoaded', function() {
 	var modules = $(".module").each(function(){
 		$(this).offset();
 	})
-	console.log("modules",modules)
 
 	// function navHighlights() {
 	// 	$(window).scroll(function(){
@@ -97,7 +96,11 @@ document.addEventListener('DOMContentLoaded', function() {
 	navHighlights();
 
     $(window).on("scroll", function(){navigationSticky();navHighlights();});
-    $(window).on("resize", function(){navigationSticky();navHighlights();});    
+	$(window).on("resize", function(){navigationSticky();navHighlights();});    
+	
+	var message = "Hello, Skilljar!";
+	var contact = "You can always reach me at Gregor@GregorRichardson.com"
+	console.log(message, contact);
 
 // end fake document ready
 }, false);
