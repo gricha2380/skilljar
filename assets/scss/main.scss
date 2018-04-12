@@ -141,7 +141,8 @@ body {
 #customerSuccess {
 	display: inline-block;
     vertical-align: top;
-    padding: 1rem 3rem;
+	max-width: 700px;
+    padding: 1rem 0 1rem 4rem;
 }
 
 #more {
@@ -204,7 +205,7 @@ body {
 				position: absolute;
 				border-radius: 50%;
 				top: 28%;
-				left: -1rem;
+				right: -1rem;
 				width: 10px;
 				height: 10px;
 				background: $primary;
@@ -214,6 +215,8 @@ body {
 		}
 		&.active a{
 			color: $secondary;
+			text-indent: -10px;
+			display: inline-block;
 			&:before {
 				background: $secondary;
 			}
@@ -245,6 +248,17 @@ body {
 	background-position: center;
 	background-size: contain;	
 }
+
+.module {
+	ul {
+		margin-bottom: 4rem;
+		padding-left: 1rem;
+		li {
+			margin-bottom: 1rem;
+		}
+	}
+}
+
 /* Animations
 -------------------------------------------------------------- */
 @keyframes bounce {

@@ -147,7 +147,8 @@ body {
 #customerSuccess {
   display: inline-block;
   vertical-align: top;
-  padding: 1rem 3rem;
+  max-width: 700px;
+  padding: 1rem 0 1rem 4rem;
 }
 
 #more {
@@ -219,7 +220,7 @@ body {
   position: absolute;
   border-radius: 50%;
   top: 28%;
-  left: -1rem;
+  right: -1rem;
   width: 10px;
   height: 10px;
   background: #00284d;
@@ -229,6 +230,8 @@ body {
 
 #side-nav li.active a {
   color: #01ACB1;
+  text-indent: -10px;
+  display: inline-block;
 }
 
 #side-nav li.active a:before {
@@ -260,6 +263,15 @@ body {
   background: url("../img/sig-white.png") no-repeat;
   background-position: center;
   background-size: contain;
+}
+
+.module ul {
+  margin-bottom: 4rem;
+  padding-left: 1rem;
+}
+
+.module ul li {
+  margin-bottom: 1rem;
 }
 
 /* Animations
