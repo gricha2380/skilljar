@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	function navigationSticky() {
         var windowTop = $(window).scrollTop(),
 			height = document.querySelector('#header .container').offsetHeight;
-		if (windowTop + 200 > height) {
+		if (windowTop > height) {
 			document.querySelector('#side-nav').classList.add('scrolled');
 		} else if (windowTop > height/5) {
 			document.querySelector('#header .container').classList.add('scrolled');

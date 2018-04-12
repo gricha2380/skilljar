@@ -15,7 +15,7 @@ var gulp = require('gulp'),
 gulp.task('serve', ['css'], function() {
 
     browserSync.init({
-        server: "output",
+        server: "docs",
         port: 2380 //my favorite port
     });
     gulp.watch("*.html",["html"]).on('change', browserSync.reload);
@@ -31,8 +31,8 @@ gulp.task("css",function(){
 	.pipe(map.init()) //create sourcemap
 	.pipe(concat('style.min.css')) //combine into single file
 	.pipe(cssnano({discardComments: {removeAll: true}})) //minimize without comments
-	.pipe(map.write("output/assets")) //write sourcemap
-	.pipe(gulp.dest('output/assets/css')) //send completed file
+	.pipe(map.write("docs/assets")) //write sourcemap
+	.pipe(gulp.dest('docs/assets/css')) //send completed file
 	.pipe(browserSync.stream()) //update browsersync
 });
 
@@ -43,7 +43,7 @@ gulp.task('sass', ['cleanCSS'],function() {
       .pipe(sass()) //initialize sass compiler
       .pipe(cssnano({discardComments: {removeAll: true}})) //minimize without comments
       .pipe(map.write("/")) //write sourcemap
-      .pipe(gulp.dest('output/assets/css')) //send completed file
+      .pipe(gulp.dest('docs/assets/css')) //send completed file
       .pipe(browserSync.stream()); //update browsersync
 });
 
@@ -56,31 +56,31 @@ gulp.task("js",function(){
 	.pipe(uglify())
 	.on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
 	.pipe(map.write("/"))
-	.pipe(gulp.dest('output/assets/js'))
+	.pipe(gulp.dest('docs/assets/js'))
 	.pipe(browserSync.stream())
 });
 
 
 gulp.task('clean', function() {
-	del(['output']); // 'output/css/*.css*', 'output/js/app*.js*'
+	del(['docs']); // 'docs/css/*.css*', 'docs/js/app*.js*'
 });
 
 gulp.task('cleanCSS', function() {
-	del(['output/css']); // 'output/css/*.css*', 'output/js/app*.js*'
+	del(['docs/css']); // 'docs/css/*.css*', 'docs/js/app*.js*'
 });
 
 
-// copy misc. files to output
+// copy misc. files to docs
 gulp.task("copy",function(){
 	gulp.src(["assets/css/**/*","assets/data/*","assets/img/*","assets/js/dummyData.js"],{base:"."})
-	.pipe(gulp.dest("output"));
+	.pipe(gulp.dest("docs"));
 });
 
 //minify html
 gulp.task("html", function(){
 	gulp.src(["*.html"])
 	.pipe(htmlmin({collapseWhitespace: true}))
-	.pipe(gulp.dest("output"))
+	.pipe(gulp.dest("docs"))
 	//.pipe(browserSync.stream())
 });
 
