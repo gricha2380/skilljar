@@ -75,10 +75,12 @@ body {
 	}
 	.container {
 		display: block;
+		z-index: -1;
+		position: relative;
 		transition: $time;
 		&.scrolled {
-			animation-duration: 4s;
-			animation-name: fadeOut;
+			animation-duration: 3s;
+			animation-name: fadeDown;
 			opacity: 0;
 		}
 	}
@@ -191,11 +193,12 @@ body {
 	li {
 		list-style: none;
 		position: relative;
-		opacity: .5;
+		// opacity: .5;
 		line-height: 1.5;
 		a {
 			text-decoration: none;
 			color: $primary;
+			transition: $time;
 			&:before {
 				content: "";
 				position: absolute;
@@ -210,6 +213,7 @@ body {
 			}
 		}
 		&.active a{
+			color: $secondary;
 			&:before {
 				background: $secondary;
 			}
@@ -220,7 +224,7 @@ body {
 		position: fixed;
     	z-index: 1;
 		animation-duration: .7s;
-		animation-name: fadeIn;
+		animation-name: fadeInRight;
 		transition-delay: $time;
 	}
 }
@@ -230,6 +234,7 @@ body {
 	display: flex;
 	a {
 		margin: auto;
+		text-decoration: none;
 	}
 }
 
@@ -258,12 +263,24 @@ body {
 		opacity: 0;
 		transform: translate3d(0, -100%, 0);
 	}
-  
+
 	to {
 		opacity: 1;
 		transform: none;
 	}
-  }
+}
+
+@keyframes fadeInRight {
+	from {
+		opacity: 0;
+		transform: translate3d(150%, 0, 0);
+	}
+
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
   
 @keyframes fadeOut {
 	from {
@@ -272,6 +289,17 @@ body {
   
 	to {
 		transform: translate3d(0, -100%, 0);
+		opacity: 0;
+	}
+}
+  
+@keyframes fadeDown {
+	from {
+		opacity: 1;
+	}
+  
+	to {
+		transform: translate3d(0, 100%, 0);
 		opacity: 0;
 	}
 }
